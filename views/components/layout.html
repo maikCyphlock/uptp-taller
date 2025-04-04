@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+  {% include "components/head.html" %}
+  <body class="min-h-screen bg-gray-100">
+    {% include "components/header.html" %} {% block page_content %} {% block
+    main_content %}{% endblock %} {% block secondary_content %}{% endblock %} {%
+    endblock %} {% include "components/footer.html" %} 
+   
+
+    <!-- Script para el menú móvil -->
+     
+    <script>
+      // JavaScript para el menú móvil
+  const menuToggle = document.getElementById("menu-toggle");
+  const mobileMenu = document.getElementById("mobile-menu");
+
+  menuToggle.addEventListener("click", () => {
+    mobileMenu.classList.toggle("hidden");
+    menuToggle.classList.toggle("active");
+  });
+
+  // Cerrar menú al cambiar tamaño de pantalla
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+      mobileMenu.classList.add("hidden");
+    }
+  });
+
+  // Cerrar menú al hacer click fuera
+  document.addEventListener("click", (event) => {
+    if (
+      !menuToggle.contains(event.target) &&
+      !mobileMenu.contains(event.target)
+    ) {
+      mobileMenu.classList.add("hidden");
+    }
+  });
+    </script>
+    {% block page_scripts %}
+    {% endblock %}
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/live-reload.js"></script>
+  </body>
+</html>
