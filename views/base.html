@@ -1,0 +1,14 @@
+{% extends "components/layout.html" %}
+
+<!-- Contenido principal de la página -->
+{% block page_content %}
+
+<!-- Sección principal -->
+{% block main_content %} {% include "components/hero.html" %} {% endblock %}
+
+<!-- Sección secundaria -->
+  {% block secondary_content %}
+    {% include "components/about.html" %} 
+    {% include "components/contact.html" %} 
+  {% endblock %} 
+{% endblock %}
