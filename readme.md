@@ -4,6 +4,8 @@
 
 Un sistema web para gestión de un taller mecánico, desarrollado como prototipo antes de migrar a Django.
 
+[documentación detallada](https://github.com/maikCyphlock/uptp-taller/blob/main/documentatio.md)
+
 ## 🛠 Tecnologías Actuales
 
 - **Backend**: Node.js con Express
@@ -24,6 +26,7 @@ uptp-taller/
 │   │   ├── header.html
 │   │   ├── footer.html
 │   │   └── layout.html
+│   │    ....
 │   ├── admin.html
 │   └── base.html
 ├── public/
@@ -42,7 +45,7 @@ uptp-taller/
 1. Clonar el repositorio
 
 ````bash
-git clone [https://github.com/maikcyphlock/uptp-taller.git](https://github.com/maikcyphlock/uptp-taller.git)
+git clone https://github.com/maikcyphlock/uptp-taller.git
 cd uptp-taller
 
 2. Instalar dependencias
